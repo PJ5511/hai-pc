@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spin</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="video-container">
+        <video id="spinVideo" autoplay muted playsinline>
+            <source src="assets/spin.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    <script>
+        document.getElementById('spinVideo').onended = function() {
+            const randomValue = Math.random() * 100;
+            if (randomValue <= 1) {
+                window.location.href = 'result1.html'; // 當筆折扣1000元
+            } else if (randomValue <= 5) {
+                window.location.href = 'result2.html'; // 當筆95折優惠
+            } else if (randomValue <= 40) {
+                window.location.href = 'result3.html'; // 寵愛之名 亮白黃金藻防曬霜
+            } else if (randomValue <= 65) {
+                window.location.href = 'result4.html'; // 品牌周邊小物
+            } else if (randomValue <= 80) {
+                window.location.href = 'result5.html'; // 品牌精選首飾
+            } else {
+                window.location.href = 'result6.html'; // 極透氣銀離子包臀內褲
+            }
+        };
+    </script>
+</body>
+</html>
