@@ -11,12 +11,6 @@
         <img src="step.png" alt="Steps" id="stepsImage">
     </div>
     <script>
-        // 检查是否是刷新操作
-        if (performance.navigation.type === 1) {
-            // 如果是刷新操作，重定向到 intro.html
-            window.location.href = 'intro.html';
-        }
-
         document.getElementById('stepsImage').onclick = function() {
             window.location.href = 'spin.html';
         };
