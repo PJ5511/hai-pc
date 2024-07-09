@@ -9,7 +9,6 @@ body {
     min-height: 100vh;
     background-color: #f0f0f0;
     flex-direction: column;
-    overflow: hidden;
 }
 
 /* 视频容器样式 */
@@ -77,31 +76,5 @@ video {
         width: 100%;
         padding: 10px 0;
         font-size: 18px;
-    }
-}
-
-/* 适应 360x640 尺寸的媒体查询 */
-@media (max-width: 360px) and (max-height: 640px) {
-    body {
-        flex-direction: column;
-        padding: 5px;
-    }
-
-    .video-container,
-    .image-container {
-        width: 100%;
-        height: auto;
-    }
-
-    video,
-    #stepsImage {
-        width: 100%;
-        height: auto;
-    }
-
-    #spinButton {
-        width: 100%;
-        padding: 8px 0;
-        font-size: 14px;
     }
 }
