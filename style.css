@@ -6,13 +6,14 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
     background-color: #f0f0f0;
+    flex-direction: column;
 }
 
+/* 视频容器样式 */
 .video-container {
     width: 100%;
-    max-width: 100%;
     height: auto;
     display: flex;
     justify-content: center;
@@ -24,9 +25,9 @@ video {
     height: auto;
 }
 
+/* 图片容器样式 */
 .image-container {
     width: 100%;
-    max-width: 100%;
     height: auto;
     display: flex;
     justify-content: center;
@@ -39,6 +40,7 @@ video {
     cursor: pointer;
 }
 
+/* 轮盘容器样式 */
 #wheel-container {
     display: flex;
     flex-direction: column;
@@ -50,4 +52,29 @@ video {
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
+}
+
+/* 媒体查询 */
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .video-container,
+    .image-container {
+        width: 100%;
+    }
+
+    video,
+    #stepsImage {
+        width: 100%;
+        height: auto;
+    }
+
+    #spinButton {
+        width: 100%;
+        padding: 10px 0;
+        font-size: 18px;
+    }
 }
