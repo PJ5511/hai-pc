@@ -1,26 +1,80 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Steps</title>
-    <link rel="stylesheet" href="style.css">
-    <script>
-        // 检查是否是刷新操作
-        if (performance.navigation.type === performance.navigation.TYPE_RELOAD) {
-            // 如果是刷新操作，重定向到 index.html
-            window.location.href = 'index.html';
-        }
-    </script>
-</head>
-<body>
-    <div class="image-container">
-        <img src="step.png" alt="Steps" id="stepsImage">
-    </div>
-    <script>
-        document.getElementById('stepsImage').onclick = function() {
-            window.location.href = 'spin.html';
-        };
-    </script>
-</body>
-</html>
+/* 全局設置 */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+    flex-direction: column;
+}
+
+/* 视频容器样式 */
+.video-container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+video {
+    width: 100%;
+    height: auto;
+}
+
+/* 图片容器样式 */
+.image-container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#stepsImage {
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+}
+
+/* 轮盘容器样式 */
+#wheel-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#spinButton {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* 媒体查询 */
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .video-container,
+    .image-container {
+        width: 100%;
+    }
+
+    video,
+    #stepsImage {
+        width: 100%;
+        height: auto;
+    }
+
+    #spinButton {
+        width: 100%;
+        padding: 10px 0;
+        font-size: 18px;
+    }
+}
