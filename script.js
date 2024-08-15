@@ -5,10 +5,10 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // 刪除不需要的獎品項目後的獎品列表
     const prizes = [
-        { name: '當筆折扣1000元', probability: 1 },
-        { name: '當筆95折優惠', probability: 4 },
-        { name: '品牌周邊小物', probability: 25 },
-        { name: '品牌精選首飾', probability: 15 }
+        { name: '當筆折扣1000元', probability: 0.25, url: 'result1.html' },
+        { name: '當筆95折優惠', probability: 0.75, url: 'result2.html' },
+        { name: '品牌周邊小物', probability: 44, url: 'result4.html' },
+        { name: '品牌精選首飾', probability: 55, url: 'result5.html' }
     ];
 
     const prizeColors = ['#FFDDC1', '#FFABAB', '#FFC3A0', '#FF677D', '#D4A5A5', '#392F5A'];
@@ -47,13 +47,13 @@ document.addEventListener("DOMContentLoaded", function() {
         for (let prize of prizes) {
             accumulatedProbability += prize.probability;
             if (randomValue <= accumulatedProbability) {
-                selectedPrize = prize.name;
+                selectedPrize = prize;
                 break;
             }
         }
 
-        localStorage.setItem('prize', selectedPrize);
-        window.location.href = 'result.html';
+        localStorage.setItem('prize', selectedPrize.name);
+        window.location.href = selectedPrize.url; // 自動跳轉到對應的結果頁面
     }
 
     drawWheel();
