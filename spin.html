@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <script>
         // 检查是否是刷新操作
-        if (performance.navigation.type === 1) {
+        if (performance.navigation.type === performance.navigation.TYPE_RELOAD) {
             // 如果是刷新操作，重定向到 index.html
             window.location.href = 'index.html';
         }
@@ -27,12 +27,10 @@
                 window.location.href = 'result1.html'; // 當筆折扣1000元
             } else if (randomValue <= 1) {
                 window.location.href = 'result2.html'; // 當筆95折優惠
-            } else if (randomValue <= 34) {
+            } else if (randomValue <= 44) {
                 window.location.href = 'result4.html'; // 品牌周邊小物
-            } else if (randomValue <= 67) {
+            } else if (randomValue <= 55) {
                 window.location.href = 'result5.html'; // 品牌精選首飾
-            } else {
-                window.location.href = 'result6.html'; // 極透氣銀離子包臀內褲
             }
         };
     </script>
