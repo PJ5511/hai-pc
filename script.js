@@ -3,13 +3,12 @@ document.addEventListener("DOMContentLoaded", function() {
     const ctx = canvas.getContext('2d');
     const spinButton = document.getElementById('spinButton');
 
+    // 刪除不需要的獎品項目後的獎品列表
     const prizes = [
         { name: '當筆折扣1000元', probability: 1 },
         { name: '當筆95折優惠', probability: 4 },
-        { name: '寵愛之名 亮白黃金藻防曬霜', probability: 35 },
         { name: '品牌周邊小物', probability: 25 },
-        { name: '品牌精選首飾', probability: 15 },
-        { name: '極透氣銀離子包臀內褲', probability: 20 }
+        { name: '品牌精選首飾', probability: 15 }
     ];
 
     const prizeColors = ['#FFDDC1', '#FFABAB', '#FFC3A0', '#FF677D', '#D4A5A5', '#392F5A'];
